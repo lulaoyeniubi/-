@@ -1,5 +1,6 @@
 import pytest
 from common.utils import *
+
 date = read_csv(data_path + '/test_logins.csv')
 
 
