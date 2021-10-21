@@ -40,7 +40,7 @@ def get_test_data(s):
     把 'account=张三，\npassword=123456'  转换为 {‘account’:‘张三’，’password‘:’123456'}
     :return:
     '''
-#########
+    #########
     # data = dict()
     # ss = s.split(",")
     # for v in ss:
@@ -54,15 +54,16 @@ def get_test_data(s):
     #     data[idx] = sv[1]
     # data = json.dumps(data)
     # return data
-###########
+    ###########
 
     data = {}
     r = re.split(',\n', s)
     for i, j in enumerate(r):
         tmp = j.split("=")
         data[tmp[0]] = tmp[1]
-        print(type(data),data)
+        print(type(data), data)
     return data
+
 
 if __name__ == '__main__':
     r = read_csv(data_path + '/test_logins.csv')
